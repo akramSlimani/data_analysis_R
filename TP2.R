@@ -1,8 +1,9 @@
-#exo1
+#matrice de corrélation
 cor(ozone.m)
 #arrondir a 3 chiffres apres la virgule
 core<-round(cor(ozone.m),3)
 core
+
 cor(ozone$maxO3,ozone$T9)
 cor(ozone$maxO3,ozone$T12)
 cor(ozone$maxO3,ozone$T15)
@@ -32,14 +33,16 @@ plot(reg.simple$residuals)
 lm(maxO3~maxO3v, data=ozone)
 lm(maxO3~T12, data=ozone)
 plot(maxO3~maxO3v,data=ozone)
-#exo2
+
+
 reg<- lm(maxO3~maxO3v,data=ozone)
 reg
 abline(reg, col="Red")
 points(mean(ozone$maxO3),mean(ozone$maxO3v),col="Red")
 reg$residuals
 hist(reg$residuals)
-#exo3
+
+
 diabet <- data.frame(patient, blood.glucose, short.velocity)
 diabet
 patient<-c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23)
